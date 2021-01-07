@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="920" pageHeight="595" orientation="Landscape" columnWidth="880" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0">
+	<property name="ireport.zoom" value="1.1000000000000107"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     barang.`kd_barang` AS `Kode Barang`,
+     barang.`merk` AS Merk,
+     barang.`tipe` AS Tipe,
+     barang.`ram` AS RAM,
+     barang.`prosesor` AS Prosesor,
+     barang.`vga` AS VGA,
+     barang.`storage` AS Storage,
+     barang.`baterai` AS Baterai,
+     barang.`tahun_rilis` AS `Tahun Rilis`,
+     barang.`harga` AS Harga,
+     barang.`stok` AS Stok
+FROM
+     `barang` barang]]>
+	</queryString>
+	<field name="Kode Barang" class="java.lang.String"/>
+	<field name="Merk" class="java.lang.String"/>
+	<field name="Tipe" class="java.lang.String"/>
+	<field name="RAM" class="java.lang.String"/>
+	<field name="Prosesor" class="java.lang.String"/>
+	<field name="VGA" class="java.lang.String"/>
+	<field name="Storage" class="java.lang.String"/>
+	<field name="Baterai" class="java.lang.String"/>
+	<field name="Tahun Rilis" class="java.sql.Date"/>
+	<field name="Harga" class="java.lang.Integer"/>
+	<field name="Stok" class="java.lang.Integer"/>
+	<background>
+		<band height="575" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="234" width="20" height="241" backcolor="#17ACCF"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="475" width="105" height="100" backcolor="#17ACCF"/>
+				<textField>
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#FFFFFF"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" forecolor="#FFFFFF" backcolor="#FFFFFF"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="67" width="646" height="37"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Seluruh Barang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="232" y="0" width="646" height="67" forecolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="48"/>
+				</textElement>
+				<text><![CDATA[Laporan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="5" width="880" height="20" backcolor="#17ACCF"/>
+				<staticText>
+					<reportElement style="Column header" x="27" y="0" width="92" height="15"/>
+					<textElement/>
+					<text><![CDATA[Kode Barang]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="119" y="0" width="80" height="15"/>
+					<textElement/>
+					<text><![CDATA[Merk]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="199" y="0" width="96" height="15"/>
+					<textElement/>
+					<text><![CDATA[Tipe]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="295" y="0" width="64" height="15"/>
+					<textElement/>
+					<text><![CDATA[RAM]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="359" y="0" width="99" height="15"/>
+					<textElement/>
+					<text><![CDATA[Prosesor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="458" y="0" width="102" height="15"/>
+					<textElement/>
+					<text><![CDATA[VGA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="560" y="0" width="72" height="15"/>
+					<textElement/>
+					<text><![CDATA[Storage]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="632" y="0" width="44" height="15"/>
+					<textElement/>
+					<text><![CDATA[Baterai]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="676" y="0" width="74" height="15"/>
+					<textElement/>
+					<text><![CDATA[Tahun Rilis]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="750" y="0" width="89" height="15"/>
+					<textElement/>
+					<text><![CDATA[Harga]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="839" y="0" width="39" height="15"/>
+					<textElement/>
+					<text><![CDATA[Stok]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="27" height="15"/>
+					<textElement/>
+					<text><![CDATA[No.]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="1" width="880" height="15"/>
+				<textField>
+					<reportElement style="Detail" x="27" y="0" width="92" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Kode Barang}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="119" y="0" width="80" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Merk}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="199" y="0" width="96" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Tipe}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="295" y="0" width="64" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{RAM}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="359" y="0" width="99" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Prosesor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="458" y="0" width="102" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{VGA}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="560" y="0" width="72" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Storage}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement style="Detail" x="676" y="0" width="74" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Tahun Rilis}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0">
+					<reportElement style="Detail" x="750" y="0" width="89" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Harga}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="839" y="0" width="39" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{Stok}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="16" width="878" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="632" y="1" width="44" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{Baterai}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#.">
+				<reportElement x="0" y="0" width="27" height="16"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="695" y="8" width="131" height="20" forecolor="#000000"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
